@@ -37,7 +37,6 @@ void Stepper_Start(uint8_t dir){
     HAL_GPIO_WritePin(MOTOR_SD_GPIO_Port, MOTOR_SD_Pin, GPIO_PIN_SET);
     
     // 产生输入脉冲
-    __HAL_TIM_ENABLE_IT(&htim1,TIM_IT_UPDATE);
     HAL_TIM_OC_Start_IT(&htim1, TIM_CHANNEL_1);
 }
 
@@ -78,11 +77,6 @@ uint32_t Stepper_CalculateNextStep(void)
             stepper_motor.state = 1; // 匀速阶段
             stepper_motor.current_speed = stepper_motor.v_max;
         }
-        {
-            // 进入下一个状态 => 匀速阶段
-            stepper_motor.state = 1; // 匀速阶段
-            stepper_motor.current_speed = stepper_motor.v_max;
-        }
     }
     // 匀速阶段判断
     else if (remain_step > dec_step && stepper_motor.state == 1)
@@ -92,7 +86,8 @@ uint32_t Stepper_CalculateNextStep(void)
     }
     // 减速阶段
     else
-    {
+    {   
+        stepper_motor.state = 2;
         // 3.4 处于减速阶段 => 计算下一个步间隔的速度
         stepper_motor.current_speed -= (stepper_motor.dec * 1.0 / stepper_motor.current_speed);
     }
@@ -107,10 +102,9 @@ uint32_t Stepper_CalculateNextStep(void)
         stepper_motor.current_speed = stepper_motor.v_min;
     }
 
-    
-
     return (uint32_t)(1000000.0 / stepper_motor.current_speed);
 }
+
 
 
 
@@ -145,7 +139,8 @@ uint32_t Stepper_CalculateNextStep(void)
         step_interval = Stepper_CalculateNextStep();
         step_remainder = step_interval % 2;
      //启动电机
-     __HAL_TIM_SET_AUTORELOAD(&htim1, (step_interval / 2) - 1);
+     __HAL_TIM_SET_COUNTER(&htim1, 0);
+     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, (step_interval / 2));
     Stepper_Start(stepper_motor.dir);
 
 
@@ -153,13 +148,13 @@ uint32_t Stepper_CalculateNextStep(void)
 
  uint8_t double_flag = 0;
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim){
    if(htim ->Instance == TIM1){
     if(!double_flag){
-        __HAL_TIM_SET_AUTORELOAD(&htim1, ((step_interval + step_remainder) / 2) - 1 );
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, ((step_interval + step_remainder) / 2) + __HAL_TIM_GET_COMPARE(&htim1, TIM_CHANNEL_1)); 
         double_flag = 1;
     }else if(double_flag){
-        __HAL_TIM_SET_AUTORELOAD(&htim1, (step_interval / 2) - 1 );
+        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, (step_interval / 2) + __HAL_TIM_GET_COMPARE(&htim1, TIM_CHANNEL_1));
         double_flag = 0;
         step_interval = Stepper_CalculateNextStep();
         step_remainder = step_interval % 2;
