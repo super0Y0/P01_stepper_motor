@@ -43,3 +43,4 @@ p01_stepper_motor\app_key.o: ./interface/Int_oled.h
 p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 p01_stepper_motor\app_key.o: ./interface/stepper.h
 p01_stepper_motor\app_key.o: ../Core/Inc/tim.h
+p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
