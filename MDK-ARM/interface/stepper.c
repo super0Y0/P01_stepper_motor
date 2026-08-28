@@ -1,6 +1,7 @@
 #include "stepper.h"
 #include "stdlib.h"
 #include "com_debug.h"
+#include "mb.h"
 
 #define NUMBER_OF_STEPPER 1600 // 步进电机每转一圈的脉冲数 (步数)
 #define MOTOR_MAX_SPEED 2000 // 最大速度
@@ -33,6 +34,8 @@ Stepper_motor_Struct stepper_motor = {
  * 电机启动与三个引脚有关：DIR, SD, 输入脉冲
  */
 void Stepper_Start(uint8_t dir){
+    REG_DISC_BUF[3] = dir; //更新离散量寄存器的电机正反转状态
+    REG_COILS_BUF[2] = 1; //更新线圈寄存器的电机启动停止状态
     HAL_GPIO_WritePin(MOTOR_DIR_GPIO_Port, MOTOR_DIR_Pin, (GPIO_PinState)dir);
     HAL_GPIO_WritePin(MOTOR_SD_GPIO_Port, MOTOR_SD_Pin, GPIO_PIN_SET);
     
@@ -49,7 +52,7 @@ void Stepper_Stop(void){
     //频繁开关会导致不稳定，故停止时不关闭SD引脚，直接停止脉冲输出即可
     //HAL_GPIO_WritePin(MOTOR_SD_GPIO_Port, MOTOR_SD_Pin, GPIO_PIN_RESET);
     
-    
+    REG_COILS_BUF[2] = 0; //更新线圈寄存器的电机启动停止状态
     HAL_TIM_OC_Stop_IT(&htim1, TIM_CHANNEL_1);    
 
 }

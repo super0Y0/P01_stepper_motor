@@ -41,3 +41,10 @@ p01_stepper_motor\main.o: ./common/com_debug.h
 p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+p01_stepper_motor\main.o: ./application/App_key.h
+p01_stepper_motor\main.o: .\interface\freeModbus\include\mb.h
+p01_stepper_motor\main.o: .\interface\freeModbus\port\port.h
+p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+p01_stepper_motor\main.o: .\interface\freeModbus\include\mbport.h
+p01_stepper_motor\main.o: .\interface\freeModbus\include\mbproto.h

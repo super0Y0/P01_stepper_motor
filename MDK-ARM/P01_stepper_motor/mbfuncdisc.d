@@ -1,0 +1,12 @@
+p01_stepper_motor\mbfuncdisc.o: interface\freeModbus\functions\mbfuncdisc.c
+p01_stepper_motor\mbfuncdisc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+p01_stepper_motor\mbfuncdisc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\port\port.h
+p01_stepper_motor\mbfuncdisc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+p01_stepper_motor\mbfuncdisc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+p01_stepper_motor\mbfuncdisc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\include\mb.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\include\mbport.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\include\mbproto.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\include\mbframe.h
+p01_stepper_motor\mbfuncdisc.o: .\interface\freeModbus\include\mbconfig.h

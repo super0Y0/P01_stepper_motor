@@ -44,3 +44,9 @@ p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 p01_stepper_motor\app_key.o: ./interface/stepper.h
 p01_stepper_motor\app_key.o: ../Core/Inc/tim.h
 p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+p01_stepper_motor\app_key.o: .\interface\freeModbus\include\mb.h
+p01_stepper_motor\app_key.o: .\interface\freeModbus\port\port.h
+p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+p01_stepper_motor\app_key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+p01_stepper_motor\app_key.o: .\interface\freeModbus\include\mbport.h
+p01_stepper_motor\app_key.o: .\interface\freeModbus\include\mbproto.h

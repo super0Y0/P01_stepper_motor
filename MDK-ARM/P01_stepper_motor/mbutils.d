@@ -1,0 +1,10 @@
+p01_stepper_motor\mbutils.o: interface\freeModbus\functions\mbutils.c
+p01_stepper_motor\mbutils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+p01_stepper_motor\mbutils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+p01_stepper_motor\mbutils.o: .\interface\freeModbus\port\port.h
+p01_stepper_motor\mbutils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+p01_stepper_motor\mbutils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
+p01_stepper_motor\mbutils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+p01_stepper_motor\mbutils.o: .\interface\freeModbus\include\mb.h
+p01_stepper_motor\mbutils.o: .\interface\freeModbus\include\mbport.h
+p01_stepper_motor\mbutils.o: .\interface\freeModbus\include\mbproto.h

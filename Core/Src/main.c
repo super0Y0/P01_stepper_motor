@@ -26,7 +26,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "App_display.h"
-
+#include "App_key.h"
+#include "mb.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,9 +94,17 @@ int main(void)
   MX_I2C2_Init();
   MX_USART1_UART_Init();
   MX_TIM1_Init();
+  MX_TIM3_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	App_ID_Init();
 	App_OLED_Init();
+//初始化modbus
+  extern uint8_t machine_ID;
+  eMBInit(MB_RTU,machine_ID,0,115200,0);   
+//使能modbus
+  eMBEnable();
+  
   /*Com_debug_init();
 	
   debug_printf("Hello World!%d", 10);
@@ -120,6 +129,9 @@ int main(void)
   {
 		App_OLED_Show();
     App_KeyFunction();
+
+    //轮询modbus
+    eMBPoll();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -334,10 +334,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
+              <MiscControls>-DNDEBUG</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;./common;./interface;./application</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;./common;./interface;./application;.\interface\freeModbus;.\interface\freeModbus\ascii;.\interface\freeModbus\functions;.\interface\freeModbus\include;.\interface\freeModbus\port;.\interface\freeModbus\rtu</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -723,6 +723,146 @@
               <FileName>App_key.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\application\App_key.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus</GroupName>
+          <Files>
+            <File>
+              <FileName>mb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\mb.c</FilePath>
+            </File>
+            <File>
+              <FileName>port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus/rtu</GroupName>
+          <Files>
+            <File>
+              <FileName>mbcrc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\rtu\mbcrc.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbrtu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\rtu\mbrtu.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus/functions</GroupName>
+          <Files>
+            <File>
+              <FileName>mbutils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbutils.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncother.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfuncother.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncinput.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfuncinput.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncholding.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfuncholding.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncdisc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfuncdisc.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfuncdiag.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfuncdiag.c</FilePath>
+            </File>
+            <File>
+              <FileName>mbfunccoils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\functions\mbfunccoils.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus/port</GroupName>
+          <Files>
+            <File>
+              <FileName>portevent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\port\portevent.c</FilePath>
+            </File>
+            <File>
+              <FileName>portserial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\port\portserial.c</FilePath>
+            </File>
+            <File>
+              <FileName>porttimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\port\porttimer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus/ascii</GroupName>
+          <Files>
+            <File>
+              <FileName>mbascii.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\interface\freeModbus\ascii\mbascii.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>freeModbus/include</GroupName>
+          <Files>
+            <File>
+              <FileName>mb.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mb.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbconfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbframe.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbframe.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbfunc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbfunc.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbport.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbport.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbproto.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbproto.h</FilePath>
+            </File>
+            <File>
+              <FileName>mbutils.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\interface\freeModbus\include\mbutils.h</FilePath>
             </File>
           </Files>
         </Group>

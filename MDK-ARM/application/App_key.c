@@ -1,5 +1,7 @@
 #include "App_key.h"
 #include "stepper.h"
+#include "mb.h"
+
 
 #define CIRCLE_MAX 20 // 最大圈数
 
@@ -43,18 +45,22 @@ void App_KeyFunction(void){
     else if(!display_flag){//在主页面
         switch(key_state){
         case 1:
+            
             key_state = 0; // 重置按键状态
             set_circle++; // KEY1:圈数加一
             if(set_circle > CIRCLE_MAX) { // 限制最大圈数为20
                 set_circle = CIRCLE_MAX;
             }
+            REG_HOLD_BUF[2] = set_circle + 500; // 更新保持寄存器的圈数值
             break;
         case 2:
+            
            key_state = 0; // 重置按键状态
            set_circle--; // KEY2:圈数减一
             if(set_circle < -CIRCLE_MAX) { // 限制最小圈数为-20
                 set_circle = -CIRCLE_MAX;
             }
+            REG_HOLD_BUF[2] = set_circle + 500; // 更新保持寄存器的圈数值
             break;
         case 3:
             key_state = 0;
