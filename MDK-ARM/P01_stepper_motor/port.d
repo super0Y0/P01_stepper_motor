@@ -6,7 +6,7 @@ p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 p01_stepper_motor\port.o: .\interface\freeModbus\include\mbport.h
 p01_stepper_motor\port.o: .\interface\freeModbus\include\mbproto.h
-p01_stepper_motor\port.o: ./common/Com_debug.h
+p01_stepper_motor\port.o: ./common/com_debug.h
 p01_stepper_motor\port.o: ../Core/Inc/usart.h
 p01_stepper_motor\port.o: ../Core/Inc/main.h
 p01_stepper_motor\port.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h

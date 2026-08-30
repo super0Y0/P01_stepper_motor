@@ -26,10 +26,12 @@ void App_KeyFunction(void){
         case 1:
             key_state = 0; // 重置按键状态
             machine_ID++; // KEY1:ID加一
+            if(machine_ID > 247) machine_ID = 247; // 限制最大ID为247
             break;
         case 2:
            key_state = 0; // 重置按键状态
            machine_ID--; // KEY2:ID减一
+            if(machine_ID < 1) machine_ID = 1; // 限制最小ID为1，避免下溢
             break;
         case 3:
             key_state = 0; // 重置按键状态

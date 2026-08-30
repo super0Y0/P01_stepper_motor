@@ -29,6 +29,7 @@
 "p01_stepper_motor\stepper.o"
 "p01_stepper_motor\app_display.o"
 "p01_stepper_motor\app_key.o"
+"p01_stepper_motor\app_modbus_run.o"
 "p01_stepper_motor\mb.o"
 "p01_stepper_motor\port.o"
 "p01_stepper_motor\mbcrc.o"

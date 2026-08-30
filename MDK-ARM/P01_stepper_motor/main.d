@@ -48,3 +48,6 @@ p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
 p01_stepper_motor\main.o: .\interface\freeModbus\include\mbport.h
 p01_stepper_motor\main.o: .\interface\freeModbus\include\mbproto.h
+p01_stepper_motor\main.o: ./application/App_modbus_run.h
+p01_stepper_motor\main.o: ./interface/stepper.h
+p01_stepper_motor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

@@ -1,6 +1,6 @@
 #include "App_display.h"
 
-uint8_t machine_ID = 1;//所有的从设备ID都存储在EEPROM中，第一次启动时，默认ID为1，不能直接用于控制使用
+uint8_t machine_ID = 5;//所有的从设备ID都存储在EEPROM中，第一次启动时，默认ID为1，不能直接用于控制使用
 uint8_t display_flag = 0; //显示标志位，0为主页面，1为ID页面
 //记录需要运行的圈数
 int8_t set_circle = 0;
@@ -24,7 +24,14 @@ void App_ID_Init(void){
         W24C02_WriteByte(0x01, machine_ID);
     } else {
         //非第一次启动，读取ID
-        machine_ID = W24C02_ReadByte(0x01);
+        uint8_t saved_id = W24C02_ReadByte(0x01);
+        //合法性检查：modbus从机地址合法范围1~247，非法(如下溢写入的252)则恢复默认ID
+        if(saved_id == 0 || saved_id > 247){
+            machine_ID = 5; //恢复默认ID
+            W24C02_WriteByte(0x01, machine_ID); //重新写回，纠正EEPROM中的非法值
+        } else {
+            machine_ID = saved_id;
+        }
     }
 
     printf("ID: %d\n", machine_ID);

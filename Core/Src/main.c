@@ -28,6 +28,7 @@
 #include "App_display.h"
 #include "App_key.h"
 #include "mb.h"
+#include "App_modbus_run.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -132,6 +133,7 @@ int main(void)
 
     //轮询modbus
     eMBPoll();
+    App_Modbus_Run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,5 +1,5 @@
 #include "mb.h"
-#include "Com_debug.h"
+#include "com_debug.h"
 
 // 核心记录freeModbus从设备的四个数组
 // 声明输入寄存器缓冲区，用于存储十路输入寄存器的值  
@@ -102,7 +102,7 @@ eMBErrorCode eMBRegHoldingCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRe
         }
     }
 
-    debug_printf("reg action:%d\n", REG_HOLD_BUF[2]);
+    printf("reg action:%d\n", REG_HOLD_BUF[2]);
     return MB_ENOERR;
 }
 
@@ -196,7 +196,7 @@ eMBErrorCode eMBRegCoilsCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNCoil
         }
     }
 
-    printf("线圈操作:%d\n", REG_COILS_BUF[2]);
+    debug_printf("coils action:%d\n", REG_COILS_BUF[2]);
 
     return MB_ENOERR;
 }
