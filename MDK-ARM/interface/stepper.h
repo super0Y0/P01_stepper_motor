@@ -21,6 +21,7 @@ typedef struct{
     
 }Stepper_motor_Struct;
 
+extern Stepper_motor_Struct stepper_motor; //电机状态，供服务层读取
 
 void Stepper_Start(uint8_t dir);
 void Stepper_Config(int8_t set_num);

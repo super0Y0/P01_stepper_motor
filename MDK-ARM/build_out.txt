@@ -1,0 +1,18 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'P01_stepper_motor'
+compiling app_state.c...
+service\app_state.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+service\app_state.c: 1 warning, 0 errors
+compiling App_key.c...
+compiling App_modbus_run.c...
+application\App_modbus_run.c(26): warning:  #188-D: enumerated type mixed with another type
+   eMBInit(MB_RTU,machine_ID,0,115200,0); 
+application\App_modbus_run.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+application\App_modbus_run.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=32824 RO-data=7828 RW-data=480 ZI-data=9288  
+FromELF: creating hex file...
+"P01_stepper_motor\P01_stepper_motor.axf" - 0 Error(s), 3 Warning(s).
+Build Time Elapsed:  00:00:01

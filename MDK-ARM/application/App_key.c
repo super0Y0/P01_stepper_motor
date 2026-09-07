@@ -1,14 +1,13 @@
-#include "App_key.h"
+#include "FreeRTOS.h"
+#include "cmsis_os2.h"
 #include "stepper.h"
 #include "mb.h"
-
+#include "key.h"
+#include "storage_svc.h"
+#include "app_state.h"
 
 #define CIRCLE_MAX 20 // 最大圈数
 
-extern uint8_t key_state; // 声明外部变量key_state
-extern uint8_t display_flag; // 声明外部变量dispaly_flag
-extern int8_t set_circle; // 声明外部变量set_circle
-extern uint8_t machine_ID; // 声明外部变量machine_ID
 
 /**
  * @brief 根据不同按键，展示不同功能
@@ -21,6 +20,7 @@ extern uint8_t machine_ID; // 声明外部变量machine_ID
  */
 
 void App_KeyFunction(void){
+    Key_Scan(); // 扫描按键状态
     if(display_flag){//在ID页面
         switch(key_state){
         case 1:
@@ -75,4 +75,16 @@ void App_KeyFunction(void){
             break;
       }
     }
+}
+
+void StartKeyTask(void *argument)
+{
+  /* USER CODE BEGIN StartKeyTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    App_KeyFunction(); // 调用按键处理函数
+    osDelay(10);
+  }
+  /* USER CODE END StartKeyTask */
 }

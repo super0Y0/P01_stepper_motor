@@ -1,11 +1,11 @@
 p01_stepper_motor\port.o: interface\freeModbus\port.c
-p01_stepper_motor\port.o: .\interface\freeModbus\include\mb.h
-p01_stepper_motor\port.o: .\interface\freeModbus\port\port.h
+p01_stepper_motor\port.o: ./interface/freeModbus/include/mb.h
+p01_stepper_motor\port.o: ./interface/freeModbus/port/port.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-p01_stepper_motor\port.o: .\interface\freeModbus\include\mbport.h
-p01_stepper_motor\port.o: .\interface\freeModbus\include\mbproto.h
+p01_stepper_motor\port.o: ./interface/freeModbus/include/mbport.h
+p01_stepper_motor\port.o: ./interface/freeModbus/include/mbproto.h
 p01_stepper_motor\port.o: ./common/com_debug.h
 p01_stepper_motor\port.o: ../Core/Inc/usart.h
 p01_stepper_motor\port.o: ../Core/Inc/main.h
@@ -37,6 +37,7 @@ p01_stepper_motor\port.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.
 p01_stepper_motor\port.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 p01_stepper_motor\port.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 p01_stepper_motor\port.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+p01_stepper_motor\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 p01_stepper_motor\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

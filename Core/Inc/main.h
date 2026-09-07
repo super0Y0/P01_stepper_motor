@@ -28,7 +28,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
-
+#include "cmsis_os2.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -41,6 +41,7 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
+extern osMutexId_t i2cMutexHandle;
 
 /* USER CODE END EC */
 
@@ -61,16 +62,12 @@ void Error_Handler(void);
 #define MOTOR_DIR_GPIO_Port GPIOA
 #define KEY1_Pin GPIO_PIN_15
 #define KEY1_GPIO_Port GPIOA
-#define KEY1_EXTI_IRQn EXTI15_10_IRQn
 #define KEY2_Pin GPIO_PIN_3
 #define KEY2_GPIO_Port GPIOB
-#define KEY2_EXTI_IRQn EXTI3_IRQn
 #define KEY3_Pin GPIO_PIN_4
 #define KEY3_GPIO_Port GPIOB
-#define KEY3_EXTI_IRQn EXTI4_IRQn
 #define KEY4_Pin GPIO_PIN_5
 #define KEY4_GPIO_Port GPIOB
-#define KEY4_EXTI_IRQn EXTI9_5_IRQn
 #define MOTOR_SD_Pin GPIO_PIN_9
 #define MOTOR_SD_GPIO_Port GPIOB
 

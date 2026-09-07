@@ -29,6 +29,7 @@ p01_stepper_motor\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_
 p01_stepper_motor\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 p01_stepper_motor\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 p01_stepper_motor\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+p01_stepper_motor\stm32f1xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 p01_stepper_motor\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
 p01_stepper_motor\stm32f1xx_it.o: ./common/com_debug.h
 p01_stepper_motor\stm32f1xx_it.o: ../Core/Inc/usart.h

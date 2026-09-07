@@ -31,6 +31,7 @@ p01_stepper_motor\w24c02.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pw
 p01_stepper_motor\w24c02.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 p01_stepper_motor\w24c02.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 p01_stepper_motor\w24c02.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+p01_stepper_motor\w24c02.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 p01_stepper_motor\w24c02.o: ./common/com_debug.h
 p01_stepper_motor\w24c02.o: ../Core/Inc/usart.h
 p01_stepper_motor\w24c02.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

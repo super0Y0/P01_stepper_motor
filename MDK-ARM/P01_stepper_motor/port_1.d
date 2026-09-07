@@ -1,0 +1,12 @@
+p01_stepper_motor\port_1.o: ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM3\port.c
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+p01_stepper_motor\port_1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+p01_stepper_motor\port_1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+p01_stepper_motor\port_1.o: ../Core/Inc/FreeRTOSConfig.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+p01_stepper_motor\port_1.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

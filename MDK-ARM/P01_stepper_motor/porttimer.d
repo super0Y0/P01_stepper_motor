@@ -3,9 +3,9 @@ p01_stepper_motor\porttimer.o: interface\freeModbus\port\port.h
 p01_stepper_motor\porttimer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 p01_stepper_motor\porttimer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
 p01_stepper_motor\porttimer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-p01_stepper_motor\porttimer.o: .\interface\freeModbus\include\mb.h
-p01_stepper_motor\porttimer.o: .\interface\freeModbus\include\mbport.h
-p01_stepper_motor\porttimer.o: .\interface\freeModbus\include\mbproto.h
+p01_stepper_motor\porttimer.o: ./interface/freeModbus/include/mb.h
+p01_stepper_motor\porttimer.o: ./interface/freeModbus/include/mbport.h
+p01_stepper_motor\porttimer.o: ./interface/freeModbus/include/mbproto.h
 p01_stepper_motor\porttimer.o: ../Core/Inc/tim.h
 p01_stepper_motor\porttimer.o: ../Core/Inc/main.h
 p01_stepper_motor\porttimer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -36,3 +36,4 @@ p01_stepper_motor\porttimer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 p01_stepper_motor\porttimer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 p01_stepper_motor\porttimer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 p01_stepper_motor\porttimer.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+p01_stepper_motor\porttimer.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h

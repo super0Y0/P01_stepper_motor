@@ -4,7 +4,7 @@
 #include "mb.h"
 
 #define NUMBER_OF_STEPPER 1600 // 步进电机每转一圈的脉冲数 (步数)
-#define MOTOR_MAX_SPEED 2000 // 最大速度
+#define MOTOR_MAX_SPEED 4000 // 最大速度
 
 // 记录当前的步间隔
 uint32_t step_interval = 0;
